@@ -40,7 +40,7 @@ public class AqicnApiManager {
     public void init() {
         try {
             // Reading XML as String using jCabi library
-            XML xml = new XMLDocument(new File("api_aqicn_key.xml"));
+            XML xml = new XMLDocument(new File("src/main/res/values/api_aqicn.xml"));
             String xmlString = xml.toString();
             API_KEY = xmlString.split("\"api_aqicn_key\">")[1].split("</")[0];
         } catch (FileNotFoundException e) {
