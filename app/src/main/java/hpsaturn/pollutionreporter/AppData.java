@@ -8,7 +8,7 @@ import com.iamhabib.easy_preference.EasyPreference;
 import com.polidea.rxandroidble2.RxBleClient;
 import com.polidea.rxandroidble2.internal.RxBleLog;
 
-import hpsaturn.pollutionreporter.api.AqicnApiManager;
+import com.jetbrains.handson.commons.api.AqicnApiManager;
 import io.reactivex.plugins.RxJavaPlugins;
 
 /**
@@ -42,6 +42,6 @@ public class AppData extends MultiDexApplication{
         rxBleClient = RxBleClient.create(this);
         RxBleClient.setLogLevel(RxBleLog.VERBOSE);
         prefBuilder = EasyPreference.with(this,"KEYS_APP_PREFERENCES");
-        AqicnApiManager.getInstance().init(this);
+        AqicnApiManager.getInstance().init();
     }
 }

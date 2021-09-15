@@ -1,9 +1,8 @@
-package hpsaturn.pollutionreporter.api;
-
-import com.hpsaturn.tools.Logger;
+package com.jetbrains.handson.commons.api;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.logging.Logger;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -16,7 +15,8 @@ import retrofit2.http.Path;
 public class CanairioAPI {
 
     public static final String API_URL = "https://api.github.com";
-    private static final String TAG = CanairioAPI.class.getSimpleName();
+    private static final Logger LOGGER = Logger.getLogger(
+            CanairioAPI.class.getSimpleName());
 
     public static class Contributor {
         public final String login;
@@ -50,7 +50,7 @@ public class CanairioAPI {
         // Fetch and print a list of the contributors to the library.
         List<Contributor> contributors = call.execute().body();
         for (Contributor contributor : contributors) {
-            Logger.d(TAG, contributor.login + " (" + contributor.contributions + ")");
+            LOGGER.fine(contributor.login + " (" + contributor.contributions + ")");
         }
     }
 }

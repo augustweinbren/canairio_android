@@ -11,7 +11,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import hpsaturn.pollutionreporter.api.AqicnApiManager;
+import com.jetbrains.handson.commons.api.AqicnApiManager;
 import com.jetbrains.handson.commons.api.AqicnDataResponse;
 import retrofit2.Call;
 import retrofit2.Callback;
